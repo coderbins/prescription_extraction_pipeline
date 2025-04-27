@@ -1,4 +1,4 @@
-# prescription_extraction_pipeline
+# Prescription Extraction Pipeline
 
 End-to-end pipeline to extract structured data from handwritten medical prescriptions using Google Gemini 2.0 and Streamlit for UI.
 
@@ -26,16 +26,16 @@ The pipeline processes handwritten medical prescriptions and extracts structured
 
 ## Pipeline Steps
 
-### 1. User Uploads Image(s)
-   - Single Image Mode: Users can upload a single prescription image in `.jpg`, `.jpeg`, or `.png` format.
-   - Dataset Mode: Users can upload a zip file containing multiple prescription images.
+### 1. **User Uploads Image(s)**
+   - **Single Image Mode**: Users can upload a single prescription image in `.jpg`, `.jpeg`, or `.png` format.
+   - **Dataset Mode**: Users can upload a zip file containing multiple prescription images.
 
-### 2. Preprocessing
-   - Validation: Ensures the uploaded files are valid image formats.
-   - Loading: Images are loaded into memory using OpenCV for further processing.
-   - Flattening (Dataset Mode): If a zip file is uploaded, the directory structure is flattened, and all valid images are extracted.
+### 2. **Preprocessing**
+   - **Validation**: Ensures the uploaded files are valid image formats.
+   - **Loading**: Images are loaded into memory using OpenCV for further processing.
+   - **Flattening (Dataset Mode)**: If a zip file is uploaded, the directory structure is flattened, and all valid images are extracted.
 
-### 3. Structured Data Extraction
+### 3. **Structured Data Extraction**
    - The loaded image(s) are passed to the `extract_structured_data` function in `src/model.py`.
    - The function uses the Google Gemini 2.0 API to analyze the image and extract structured data, such as:
      - Patient information
@@ -46,7 +46,7 @@ The pipeline processes handwritten medical prescriptions and extracts structured
      - Special instructions
    - The extracted data is returned in Markdown format.
 
-### 4. Output
+### 4. **Output**
    - The extracted data is displayed in the Streamlit app as Markdown.
    - For batch processing, results for each image are displayed sequentially.
 
@@ -54,7 +54,7 @@ The pipeline processes handwritten medical prescriptions and extracts structured
 
 ## Setup
 
-1. Create a Virtual Environment:
+1. **Create a Virtual Environment**:
    - On Windows:
      ```bash
      python -m venv venv
@@ -66,12 +66,12 @@ The pipeline processes handwritten medical prescriptions and extracts structured
      source venv/bin/activate
      ```
 
-2. Install Dependencies:
+2. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Set Up Environment Variables:
+3. **Set Up Environment Variables**:
    - Create a `.env` file in the root directory:
      ```bash
      touch .env
@@ -81,7 +81,7 @@ The pipeline processes handwritten medical prescriptions and extracts structured
      GEMINI_API_KEY="your_api_key_here"
      ```
 
-4. Run the Streamlit App:
+4. **Run the Streamlit App**:
    ```bash
    streamlit run streamlit_app.py
    ```
@@ -107,10 +107,10 @@ The pipeline processes handwritten medical prescriptions and extracts structured
 
 ## Features
 
-- Single Image Mode: Upload a single prescription image for processing.
-- Dataset Mode: Upload a zip file containing multiple prescription images for batch processing.
-- Preprocessing: Basic image loading and validation.
-- Structured Data Extraction: Uses Google Gemini 2.0 to extract and format prescription details in Markdown.
+- **Single Image Mode**: Upload a single prescription image for processing.
+- **Dataset Mode**: Upload a zip file containing multiple prescription images for batch processing.
+- **Preprocessing**: Basic image loading and validation.
+- **Structured Data Extraction**: Uses Google Gemini 2.0 to extract and format prescription details in Markdown.
 
 ---
 

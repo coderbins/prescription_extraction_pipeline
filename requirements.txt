@@ -1,0 +1,10 @@
+streamlit
+google-genai
+python-dotenv
+opencv-python-headless
+pillow
+pydantic
+datasets
+evaluate
+kaggle
+google-generativeai
