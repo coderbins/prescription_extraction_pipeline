@@ -1,0 +1,20 @@
+The Gemini 2.0 Flash Lite model is a Generative Language Model developed by Google, tailored for handling complex multimodal inputs, such as images and text, to generate highly accurate outputs based on the given context. It is ideal in this particular case for extracting structured data from images.
+Performance - The model leverages its training on a wide range of text data to effectively handle handwritten notes, which are typically harder to process with standard OCR or traditional NLP methods.
+Speed and efficiency - It ensures rapid processing of images, which is essential for real-time or batch processing in a production environment.
+API Integration- The Gemini API is integrated into your system via Python, where you interact with the model by sending image data as part of the input, along with a prompt that guides the extraction process.
+Scalability- The model can handle both single images and bulk datasets, making it suitable for various use cases, from individual prescription analysis to large-scale medical document processing.
+Multimodal Input Handling-It leverages both visual and textual cues to enhance understanding and extraction, making it suitable for tasks that require integrating image-based information with natural language processing.
+
+Other Open-Source Options:
+Tesseract OCR + GPT (OpenAI Models)
+CLIP (Contrastive Language-Image Pretraining)
+LayoutLM
+Donut (Document Understanding Transformer
+
+Tesseract OCR is an open-source optical character recognition tool for extracting text from images, and GPT models (such as GPT-3 or GPT-4) can be used for further text analysis
+Tesseract OCR struggles with poorly written handwriting, particularly in medical prescriptions with unconventional fonts or scribbled text.
+The process requires two steps: first OCR to extract text, then NLP models. Combining OCR and NLP can be more complex than using a single multimodal.
+
+CLIP is a multimodal model by OpenAI that associates images with textual descriptions. CLIP is better for tasks like image captioning or searching images by text, not for extracting detailed structured data from complex documents like prescriptions.
+
+LayoutLM and Donut is a transformer-based model designed specifically for document understanding tasks.but they may require more effort for fine-tuning and setup, particularly for handwriting-heavy prescriptions.
